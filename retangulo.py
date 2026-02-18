@@ -3,8 +3,8 @@ import sys
 
 pygame.init()
 
-largura = 600
-altura = 400
+largura = 800
+altura = 800
 
 tela = pygame.display.set_mode((largura, altura))
 pygame.display.set_caption("Retangulo")
