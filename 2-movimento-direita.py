@@ -1,5 +1,4 @@
 import pygame
-import sys
 
 pygame.init()
 
@@ -11,23 +10,21 @@ branco = (255, 255, 255)
 azul = (0, 0, 255)
 
 x, y = 250, 250
-raio = 20
+velocidade = 5
 
-clock = pygame.time.Clock()
 executando = True
 
 while executando:
+    tela.fill(branco)
+    pygame.draw.circle(tela, azul, (x, y), 20)
+
+    x += velocidade
+
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             executando = False
 
-    tela.fill(branco)
-    pygame.draw.circle(tela, azul, (x, y), raio)
-
     pygame.display.update()
-    clock.tick(60)
+    pygame.time.delay(30)
 
 pygame.quit()
-
-
-
